@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    box-sizing: border-box;
+    display: flex; /* Para o layout de flexbox */
+    height: 100vh; /* Define a altura do body para 100% da viewport */
+    flex-direction: row; /* Flex container no body para layout horizontal */
+}
+
+header {
+    width: 10%; /* Largura da coluna lateral */
+    min-height: 100vh; /* Altura mínima para cobrir toda a altura da viewport */
+    background-color: aqua; /* Cor de fundo da coluna */
+    display: flex; /* Para alinhar os itens */
+    flex-direction: column; /* Para alinhar os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    text-align: center; /* Alinha o texto centralmente */
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.menu {
+    margin-top: 20px; /* Margem superior para separar o menu do topo */
+}
+
+.menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto do elemento pai (header) */
+    display: block;
+    margin: 10px 0;
+}
+
+.item-menu {
+    padding: 10px; /* Espaçamento interno dos itens do menu */
+}
+
+main {
+    flex: 1; /* O conteúdo principal (main) ocupa o restante do espaço disponível */
+    padding: 20px; /* Espaçamento interno opcional */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha a grid verticalmente no centro */
+}
+
+.grid {
+    display: grid; /* Utiliza o layout de grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 15px; /* Espaçamento entre as células da grid */
+    height: 100%; /* Garante que a grid ocupe toda a altura do main */
+}
+
+.grid div {
+    height: 200px; /* Altura das linhas da grid (ajuste conforme necessário) */
+    background-color: lightgray; /* Cor de fundo das células da grid */
+    border-radius: 8px; /* Borda arredondada para as células */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.primeira-linha {
+    grid-column: span 3; /* Ocupa duas colunas */
+}
+
+.segunda-linha {
+    grid-column: span 1; /* Ocupa uma coluna */
+}
+
+.terceira-linha {
+    grid-column: span 1; /* Ocupa uma coluna */
+}
+
+.quarta-linha {
+    grid-column: span 2; /* Ocupa duas colunas */
+}
+
